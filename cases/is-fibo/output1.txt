@@ -1,0 +1,3 @@
+IsFibo
+IsNotFibo
+IsFibo
