@@ -13,10 +13,12 @@ if "%problem%"=="" (
     exit /b 1
 )
 
+set csc="C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\csc.exe"
+
 if not exist bin\ mkdir bin
 if not exist tmp\%problem% mkdir tmp\%problem%
 echo Compiling src\%problem%.cs ...
-csc src\%problem%.cs /out:bin\%problem%.exe /nologo
+%csc% /out:bin\%problem%.exe src\%problem%.cs /nologo
 if !errorlevel! NEQ 0 exit /b 1
 
 for /F %%i in ('dir /b cases\%problem%\input*.txt') do (
