@@ -24,9 +24,9 @@ for /F %%i in ('dir /b cases\%problem%\input*.txt') do (
     set suffix=!inputfile:~5!
     echo Executing program with test case %%i ...
     bin\%problem%.exe < cases\%problem%\%%i > tmp\%problem%\output!suffix!
-    fc cases\%problem%\output!suffix! tmp\%problem%\output!suffix! 1> NUL
+    fc /W cases\%problem%\output!suffix! tmp\%problem%\output!suffix! 1> NUL
     if !errorlevel! NEQ 0 (
-        fc cases\%problem%\output!suffix! tmp\%problem%\output!suffix!
+        fc /W cases\%problem%\output!suffix! tmp\%problem%\output!suffix!
         goto :OutputMismatch
     )
 )
