@@ -6,9 +6,8 @@ set problem=%1
 
 if "%problem%"=="" (
     echo Need to pass problem^^! Available problems are^^:
-    for /F %%i in ('dir /b src\*.cs') do (
-        set sourcefile=%%i
-        echo !sourcefile:~0,-3!
+    for /F %%I in ('dir /b src\*.*') do (
+        echo %%~nI
     )
     exit /b 1
 )
