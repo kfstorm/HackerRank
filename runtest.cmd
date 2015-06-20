@@ -2,7 +2,7 @@
 setlocal ENABLEDELAYEDEXPANSION
 
 pushd "%~dp0"
-set problem=%1
+set problem=%~n1
 
 if "%problem%"=="" (
     echo Need to pass problem^^! Available problems are^^:

@@ -1,0 +1,21 @@
+{
+	"version": "0.1.0",
+	
+	"command": "cmd",
+	
+	"isShellCommand": true,
+
+	"tasks": [
+        {
+            "taskName": "runtest",
+            "args": ["/c", "runtest", "${fileBasename}"],
+            "isBuildCommand": true,
+            "isTestCommand": true,
+        },
+        {
+            "taskName": "description",
+            "args": ["/c", "description", "${fileBasename}"],
+            "showOutput": "silent"
+        }
+    ]
+}

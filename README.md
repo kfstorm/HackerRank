@@ -8,8 +8,17 @@ If you see a source code filename `foo-bar.cs` in [src](https://github.com/kfsto
 
 * Manually open https://www.hackerrank.com/challenges/foo-bar to get the problem description.
 
-* run `description foo-bar` in command line.
+* Run `description foo-bar` in command line.
+
+* If you use Visual Studio Code, press `Ctrl+Shift+P` and type `Run Task` then press `Enter`, choose `description` task. Make sure the active document is the source code file.
 
 ## How to test the code ##
 
-Put sample input and output files inside `cases/foo-bar` folder with filename `inputX.txt` and `outputX.txt`. Then run `runtest foo-bar` in command line.
+### Sample input and output ###
+
+Put sample input and output files inside `cases/foo-bar` folder with filename `inputX.txt` and `outputX.txt`.
+
+### Run test ###
+
+* Run `runtest foo-bar` in command line.
+* If you use Visual Studio Code, press `Ctrl+Shift+B`. Make sure the active document is the source code file.
