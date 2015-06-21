@@ -11,6 +11,7 @@
             "args": ["/c", "runtest", "${fileBasename}"],
             "isBuildCommand": true,
             "isTestCommand": true,
+            "problemMatcher": ["$msCompile"]
         },
         {
             "taskName": "description",
