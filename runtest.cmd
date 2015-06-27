@@ -17,7 +17,7 @@ if exist  %bin% rmdir  %bin% /s /q
 mkdir  %bin%
 if not exist tmp\%problem% mkdir tmp\%problem%
 
-for /F %%I in ('dir /b src\%problem%.*') do (
+for /F %%I in ('dir /b src\%problem%.* 2^>nul') do (
     set SourceFileFound=true
     call :Compile %%I %2
     if !errorlevel! NEQ 0 exit /b
@@ -27,7 +27,7 @@ if [%SourceFileFound%] == [] (
     exit /b 1
 )
 
-for /F %%i in ('dir /b cases\%problem%\input*.txt') do (
+for /F %%i in ('dir /b cases\%problem%\input*.txt 2^>nul') do (
     set InputFileFound=true
     set inputfile=%%i
     set suffix=!inputfile:~5!
